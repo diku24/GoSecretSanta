@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Dolores",
+        "Santa": "Lurline",
+        "Wishes": [
+            "Factors",
+            "Shoes",
+            "haptic Reactive IB parsing backing"
+        ]
+    },
+    {
+        "Name": "Lurline",
+        "Santa": "Dolores",
+        "Wishes": [
+            "magenta",
+            "mobile",
+            "SSL Manager Direct Frozen"
+        ]
+    }
+]
