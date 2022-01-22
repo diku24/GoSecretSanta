@@ -69,7 +69,6 @@ func (*repository) AllocateSanta() error {
 	}
 
 	var entitypersons []*entity.PersonWish
-	//var entitypersonss []*entity.PersonWish
 
 	if err := json.Unmarshal([]byte(readFile), &entitypersons); err != nil {
 		logrus.Error("error in unmarshalling ")
@@ -96,26 +95,6 @@ func (*repository) AllocateSanta() error {
 
 		_ = ioutil.WriteFile("db.json", result, 0777)
 	}
-
-	// for i, element := range entitypersons {
-	// 	id := rand.Intn(length)
-	// 	if element.Santa == "" {
-	// 		if i == id {
-	// 			id = id - 1
-	// 		}
-	// 		element.Santa = entitypersons[id].Name
-	// 	}
-
-	// 	entitypersons = append(entitypersons, element)
-
-	// 	result, err := json.Marshal(entitypersons)
-	// 	if err != nil {
-	// 		logrus.Error("error in marshling the data")
-	// 	}
-
-	// 	_ = ioutil.WriteFile("db.json", result, 0777)
-	// }
-
 	return err
 
 }
