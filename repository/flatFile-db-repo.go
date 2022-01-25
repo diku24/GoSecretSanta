@@ -85,10 +85,7 @@ func (*repository) AllocateSanta() error {
 			element.Santa = entitypersons[id].Name
 		}
 
-		//entitypersonss := append(entitypersons, entitypersons[i])
-		entitypersonss := append(entitypersons, element)
-
-		result, err := json.Marshal(entitypersonss)
+		result, err := json.Marshal(entitypersons)
 		if err != nil {
 			logrus.Error("error in marshling the data")
 		}
