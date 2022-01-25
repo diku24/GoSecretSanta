@@ -53,6 +53,7 @@ func (*controller) AddPersonWish(response http.ResponseWriter, request *http.Req
 
 func (*controller) GetPersonWish(response http.ResponseWriter, request *http.Request) {
 	response.Header().Set("content-type", "application/json")
+	response.Header().Set("context-type", "application/json")
 
 	nameParam := request.URL.Query().Get("name")
 	santaParam := request.URL.Query().Get("santa")
@@ -68,8 +69,9 @@ func (*controller) GetPersonWish(response http.ResponseWriter, request *http.Req
 
 	if len(request.URL.Query()) > 0 {
 		for _, element := range person {
+
 			if nameParam != "" && santaParam != "" {
-				if nameParam == element.Name || santaParam == element.Santa {
+				if element.Name == nameParam || element.Santa == santaParam {
 					newArr = append(newArr, element)
 				}
 			} else if nameParam != "" {
@@ -81,7 +83,6 @@ func (*controller) GetPersonWish(response http.ResponseWriter, request *http.Req
 					newArr = append(newArr, element)
 				}
 			}
-
 		}
 		response.WriteHeader(http.StatusOK)
 		json.NewEncoder(response).Encode(newArr)
