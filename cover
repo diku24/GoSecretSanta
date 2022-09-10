@@ -1,4 +1,8 @@
 mode: set
+SecretSanta/service/person-services.go:19.73,22.2 2 1
+SecretSanta/service/person-services.go:24.94,26.2 1 1
+SecretSanta/service/person-services.go:28.62,30.2 1 1
+SecretSanta/service/person-services.go:32.40,34.2 1 1
 SecretSanta/controller/person-controller.go:23.75,26.2 2 1
 SecretSanta/controller/person-controller.go:28.87,34.16 4 1
 SecretSanta/controller/person-controller.go:41.2,43.16 2 0
@@ -23,7 +27,3 @@ SecretSanta/controller/person-controller.go:89.8,92.3 2 1
 SecretSanta/controller/person-controller.go:95.87,98.16 3 1
 SecretSanta/controller/person-controller.go:103.2,103.37 1 1
 SecretSanta/controller/person-controller.go:98.16,102.3 3 0
-SecretSanta/service/person-services.go:19.73,22.2 2 1
-SecretSanta/service/person-services.go:24.94,26.2 1 1
-SecretSanta/service/person-services.go:28.62,30.2 1 1
-SecretSanta/service/person-services.go:32.40,34.2 1 1
