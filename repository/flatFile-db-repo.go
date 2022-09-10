@@ -21,7 +21,7 @@ func (*repository) SavePerson(personWish *entity.PersonWish) (*entity.PersonWish
 	//Read from the File.
 	readFile, err := ioutil.ReadFile("db.json")
 	if err != nil {
-		logrus.Errorf("error while reading the data", err)
+		logrus.Errorln("error while reading the data", err)
 	}
 
 	//Define Slice of PersonWishes
@@ -29,7 +29,7 @@ func (*repository) SavePerson(personWish *entity.PersonWish) (*entity.PersonWish
 
 	//Unmarshall it
 	if err = json.Unmarshal([]byte(readFile), &entitypersons); err != nil {
-		logrus.Errorf("erroer unmarshallin the data", err)
+		logrus.Errorln("erroer unmarshallin the data", err)
 	}
 
 	//Append this to entityperson
