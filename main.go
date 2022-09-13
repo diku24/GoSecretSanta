@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	// personRepository repository.PersonRepository = repository.NewFlatFileRepository()
+	//personRepository repository.PersonRepository = repository.NewFlatFileRepository()
 	personRepository repository.PersonRepository = repository.NewCouchbaseRepository()
 
 	personServices service.PersonServices = service.NewPersonService(personRepository)
